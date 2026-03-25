@@ -36,6 +36,7 @@ frames[least] = pages[i];
 time[least] = counter;
 faults++;
 }
+}
 printf("Total Page Faults = %d\n", faults);
 return 0;
 }
