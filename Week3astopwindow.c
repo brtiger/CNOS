@@ -15,7 +15,7 @@ int main() {
     int total_transmissions = 0;
 
     printf("Stop-and-Wait ARQ Simulation\n");
-    printf("Frames: %d | Timeout: %d sec | Error Prob: %.2f%%\n\n",
+    printf("Frames: %d | Timeout: %d sec | Error Prob: %.f%%\n\n",
            total_frames, timeout_sec, error_prob * 100);
 
     while (sent < total_frames) {
@@ -39,9 +39,7 @@ int main() {
 
     printf("\nSimulation Complete!\n");
     printf("Total frames delivered: %d\n", total_frames);
-    printf("Total transmissions: %d\n", total_transmissions);
-    printf("Efficiency: %.2f%%\n",
-           (float)total_frames * 100 / total_transmissions);
+    printf("Total transmissions: %d(efficiency:%.1f%%)\n", total_transmissions,(total_frames * 100.0 / total_transmissions));
 
     return 0;
 }
