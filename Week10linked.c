@@ -9,7 +9,8 @@ int main()
 {
 int n, size, i; 
 int free_blocks[100]; 
-for(i=0;i<100;i++) free_blocks[i]=0; 
+for(i=0;i<100;i++) 
+free_blocks[i]=0; 
 printf("Enter number of files: ");
 scanf("%d",&n);
 for(i=0;i<n;i++)
@@ -20,15 +21,16 @@ struct Node *head=NULL, *temp, *newnode;
 int j, count=0;
 for(j=0;j<100 && count<size;j++)
 {
-if(free_blocks[j]==0) // if block is free
+if(free_blocks[j]==0)
 {
-
 newnode=(struct Node*)malloc(sizeof(struct Node)); 
 newnode->block=j; 
 newnode->next=NULL; 
-if(head==NULL) head=temp=newnode; 
+if(head==NULL)
+head=temp=newnode; 
 else { 
-temp->next=newnode; temp=newnode; 
+temp->next=newnode; 
+temp=newnode; 
 }
 free_blocks[j]=1; 
 count++;
