@@ -30,7 +30,6 @@ int main() {
            (int)(loss_prob * 100));
 
     int base = 0;
-    int next_seq = 0;
     int total_sent = 0;
     int retransmits = 0;
 
